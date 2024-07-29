@@ -7,9 +7,9 @@ import 'package:emergency_app/Presentation/Extras/terms_condition.dart';
 import 'package:emergency_app/Presentation/Splash/splash_screen.dart';
 import 'package:emergency_app/Presentation/Widgets/button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_share/flutter_share.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:share_plus/share_plus.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({
@@ -48,7 +48,7 @@ class DrawerWidget extends StatelessWidget {
               icon: Icons.share_outlined,
               label: 'Share',
               onTap: () {
-                Share.share('Help Link Emergency Assistant app');
+                FlutterShare.share(title: 'Help Link Emergency Assistant app');
               }),
           Extras(
             icon: Icons.assignment_outlined,
